@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/primary_light"
+    android:background="@color/colorPrimaryLight"
     tools:context="com.example.alex.matematicamente.SplashScreenActivity">
 
     <LinearLayout

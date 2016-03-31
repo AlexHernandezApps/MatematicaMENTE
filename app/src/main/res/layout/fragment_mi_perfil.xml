@@ -12,4 +12,6 @@
       android:layout_centerVertical="true"
       android:src="@drawable/algebra_icon"/>
 
+
+
 </RelativeLayout>

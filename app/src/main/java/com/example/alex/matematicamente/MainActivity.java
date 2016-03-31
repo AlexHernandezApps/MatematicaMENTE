@@ -1,5 +1,6 @@
 package com.example.alex.matematicamente;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -35,18 +36,17 @@ public class MainActivity extends AppCompatActivity
 
         MiPerfilFragment fragment = new MiPerfilFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.fragment,fragment).addToBackStack("").commit();
+        fragmentTransaction.add(R.id.fragment,fragment).commit();
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        /*Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(intent);
+        finish();*/
+        super.onBackPressed();
+
     }
 
     @Override
@@ -71,27 +71,27 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_home){
+            MiPerfilFragment fragment = new MiPerfilFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, fragment).addToBackStack("").commit();
 
         } else if(id == R.id.nav_algebra) {
             AlgebraFragment fragment = new AlgebraFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment,fragment).addToBackStack("").commit();
+            fragmentTransaction.replace(R.id.fragment, fragment).addToBackStack("").commit();
 
         } else if (id == R.id.nav_contacto) {
-
-        } else if (id == R.id.nav_exit) {
-
-        } else if (id == R.id.nav_home){
-            MiPerfilFragment fragment = new MiPerfilFragment();
+            ContactFragment fragment = new ContactFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.fragment,fragment).addToBackStack("").commit();
+            fragmentTransaction.replace(R.id.fragment,fragment).addToBackStack("").commit();
+        } else if (id == R.id.nav_exit) {
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
