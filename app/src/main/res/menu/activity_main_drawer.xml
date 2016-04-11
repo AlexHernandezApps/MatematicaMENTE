@@ -3,27 +3,37 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Mis materias"/>
+            android:id="@+id/nav_trigonometría"
+            android:title="@string/trigonometría"/>
 
         <item
             android:id="@+id/nav_algebra"
-            android:icon="@drawable/algebra_icon"
             android:title="@string/algebra" />
+
+        <item
+            android:id="@+id/nav_geometry"
+            android:title="@string/geometria_analitica"/>
+
+        <item
+            android:id="@+id/nav_calculo_dif"
+            android:title="@string/calculo_diferencial"/>
+
+        <item
+            android:id="@+id/nav_calculo_int"
+            android:title="@string/calculo_integral"/>
+
+        <item
+            android:id="@+id/nav_estadistica"
+            android:title="@string/estadistica"/>
 
     </group>
 
     <item android:title="Otros">
         <menu>
             <item
-                android:id="@+id/nav_contacto"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Contacto" />
-            <item
                 android:id="@+id/nav_exit"
                 android:icon="@drawable/exit_icon"
-                android:title="Cerrar sesión" />
+                android:title="@string/close_session"/>
         </menu>
     </item>
 

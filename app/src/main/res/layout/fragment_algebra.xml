@@ -1,16 +1,386 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alex.matematicamente.AlgebraFragment">
+    tools:context="com.example.alex.matematicamente.AlgebraFragment"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="ALGEBRA"
-        android:textSize="30sp"
-        android:textStyle=""/>
+        android:orientation="horizontal"
+        android:gravity="center">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="ALGEBRA"
+            android:textSize="22sp"
+            android:textStyle=""
+            android:textColor="@color/colorPrimary"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/algebra_logo"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginEnd="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="1. Problemas para revisar la noción de fracciones."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="2. Revisión de razones y proporciones."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="3. Problemas que involucren el uso de potencias y notación científica."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="4. Lenguaje algebraico."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="5. Adición de polinomios."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="6. Multiplicación de polinomios."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="7. Despejes."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="8. Problemas que involucren ecuaciones de primer grado con una incógnita. "
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="9. Noción de función lineal y su representación gráfica"
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="10. Problemas que involucren ecuaciones de segundo grado con una incógnita. "
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="11. Factorización."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="12. Funciones cuadráticas."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+                <TextView
+                    android:text="13. Problemas que involucren ecuaciones lineales."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="20"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_rounded">
+
+                <TextView
+                    android:text="14. Funciones polinomiales."
+                    style="@style/temario_row"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    style="@style/icon_next">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next_icon"
+                        android:tint="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

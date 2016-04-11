@@ -13,6 +13,30 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="temario_row">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">7dp</item>
+        <item name="android:layout_marginRight">7dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_weight">17</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="icon_next">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">7dp</item>
+        <item name="android:layout_marginRight">7dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

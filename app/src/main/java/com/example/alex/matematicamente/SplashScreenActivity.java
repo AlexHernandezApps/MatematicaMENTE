@@ -1,9 +1,12 @@
 package com.example.alex.matematicamente;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -22,9 +25,22 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent intent = new Intent(SplashScreenActivity.this,LoginActivity.class);
-                startActivity(intent);
-                finish();
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                String username = preferences.getString("user", "");
+                String password = preferences.getString("password","");
+                Log.e("--->", username + password);
+                if (username.equals("")){
+                    Log.e("--->","NO SE HA REALIZADO REGISTRO");
+                    Intent intent = new Intent(SplashScreenActivity.this,RegisterActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Log.e("--->","REGISTRO EXITOSO");
+                    Intent intent = new Intent(SplashScreenActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         }, SPLASH_DISPLAY_LENGTH);
     }

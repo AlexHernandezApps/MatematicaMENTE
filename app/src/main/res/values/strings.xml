@@ -10,4 +10,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trigonometría">Trigonometría</string>
+    <string name="geometria_analitica">Geometría analítica</string>
+    <string name="calculo_diferencial">Cálculo Diferencial</string>
+    <string name="calculo_integral">Cálculo Integral</string>
+    <string name="estadistica">Estadística</string>
+    <string name="close_session">Cerrar sesión</string>
 </resources>
