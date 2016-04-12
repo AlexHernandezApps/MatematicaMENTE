@@ -25,11 +25,11 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="16dp"
-            android:src="@drawable/splash_icon"/>
+            android:layout_margin="16dp"/>
 
         <EditText
             android:id="@+id/edtxBoleta"

@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 
 public class LoginActivity extends AppCompatActivity {
 
     EditText edtxUsername, edtxPassword;
     Button btnLogin;
+    SubsamplingScaleImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         edtxUsername = (EditText) findViewById(R.id.edtxUsuario);
         edtxPassword = (EditText) findViewById(R.id.edtxContraseña);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+        imageView = (SubsamplingScaleImageView) findViewById(R.id.image);
 
+        imageView.setImage(ImageSource.resource(R.drawable.launcher_icon));
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final String username = preferences.getString("user", "");
         final String password = preferences.getString("password","");

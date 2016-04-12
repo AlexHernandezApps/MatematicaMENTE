@@ -9,9 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     private final int SPLASH_DISPLAY_LENGTH = 5000;
+    SubsamplingScaleImageView imageView;
 
     /** Called when the activity is first created. */
     @Override
@@ -19,6 +23,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash_screen);
 
+        imageView = (SubsamplingScaleImageView) findViewById(R.id.image);
+        imageView.setImage(ImageSource.resource(R.drawable.splash_icon));
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
         new Handler().postDelayed(new Runnable(){

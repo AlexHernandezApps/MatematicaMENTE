@@ -12,16 +12,22 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 
 public class RegisterActivity extends AppCompatActivity {
 
     EditText edtxUsername, edtxPassword, edtxBoleta;
     Button btnNext;
     boolean band1=false,band2=false, band3=false;
+    SubsamplingScaleImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        imageView = (SubsamplingScaleImageView) findViewById(R.id.image);
+        imageView.setImage(ImageSource.resource(R.drawable.splash_icon));
 
         new MaterialDialog.Builder(this)
                 .title("AÚN NO CUENTA CON UN REGISTRO")
