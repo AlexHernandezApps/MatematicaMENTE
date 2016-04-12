@@ -26,9 +26,6 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        imageView = (SubsamplingScaleImageView) findViewById(R.id.image);
-        imageView.setImage(ImageSource.resource(R.drawable.splash_icon));
-
         new MaterialDialog.Builder(this)
                 .title("AÚN NO CUENTA CON UN REGISTRO")
                 .content("Para comenzar a utilizar la aplicación haga su registro")
@@ -37,13 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
                 .show();
         setContentView(R.layout.activity_register);
 
+        imageView = (SubsamplingScaleImageView) findViewById(R.id.image);
         edtxBoleta = (EditText) findViewById(R.id.edtxBoleta);
         edtxUsername = (EditText) findViewById(R.id.edtxUsuario);
         edtxPassword = (EditText) findViewById(R.id.edtxContraseña);
         btnNext = (Button) findViewById(R.id.btnNext);
 
         btnNext.setEnabled(false);
-
+        imageView.setImage(ImageSource.resource(R.drawable.splash_icon));
         edtxBoleta.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
