@@ -2,7 +2,9 @@ package com.example.alex.matematicamente;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     AlgebraFragment algebraFragment;
+    TextView txtUserName,txtboletaUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        txtUserName = (TextView) navigationView.getHeaderView(0).findViewById(R.id.userName);
+        txtboletaUser = (TextView) navigationView.getHeaderView(0).findViewById(R.id.txtBoleta);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        Log.e("--->", preferences.getString("user", ""));
+        txtUserName.setText(preferences.getString("user",""));
+        txtboletaUser.setText(preferences.getString("boleta",""));
 
         algebraFragment = new AlgebraFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

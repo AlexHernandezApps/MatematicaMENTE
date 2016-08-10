@@ -20,6 +20,7 @@
         android:src="@drawable/photo_profile"/>
 
     <TextView
+        android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txtBoleta"
